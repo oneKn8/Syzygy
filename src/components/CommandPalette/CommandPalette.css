@@ -1,0 +1,143 @@
+.command-palette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 15vh;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.command-palette {
+  width: 100%;
+  max-width: 600px;
+  max-height: 60vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.command-palette-input {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.command-palette-input input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.command-palette-input input:focus {
+  border-color: var(--accent);
+}
+
+.command-palette-input input::placeholder {
+  color: var(--text-secondary);
+}
+
+.command-palette-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.command-palette-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.command-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.command-item:hover,
+.command-item.selected {
+  background: var(--bg-tertiary);
+}
+
+.command-item.selected {
+  background: var(--accent);
+}
+
+.command-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.command-title {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.command-item.selected .command-title {
+  color: white;
+}
+
+.command-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.command-item.selected .command-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.command-shortcut {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+.command-item.selected .command-shortcut {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.command-palette-footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.command-palette-footer kbd {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.7rem;
+  margin-right: 0.25rem;
+}

@@ -1,0 +1,123 @@
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-primary);
+}
+
+.preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.preview-status {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  min-width: 80px;
+}
+
+.preview-status .compiling {
+  color: var(--warning);
+}
+
+.preview-status .compile-time {
+  color: var(--success);
+}
+
+.preview-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview-pagination button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.preview-pagination .page-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  min-width: 60px;
+  text-align: center;
+}
+
+.preview-zoom {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.preview-zoom button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  margin: 0;
+  min-width: 32px;
+}
+
+.preview-zoom .zoom-level {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  min-width: 50px;
+  text-align: center;
+}
+
+.preview-viewport {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #404040;
+}
+
+.preview-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.preview-page img {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.preview-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  height: 100%;
+}
+
+.preview-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid var(--error);
+  border-radius: 4px;
+  padding: 1rem;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.preview-error h4 {
+  color: var(--error);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.preview-error pre {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  font-family: "Fira Code", "Consolas", monospace;
+}

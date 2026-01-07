@@ -1,0 +1,45 @@
+#!/bin/bash
+# Pre-commit hook for Syzygy
+
+set -e
+
+echo "Running pre-commit checks..."
+
+# Check for AI attribution patterns (exclude hook files)
+ATTR_CHECK=$(git diff --cached -- ':!.githooks/*' | grep -iE "Co-Authored-By.*@|Generated with \[|noreply@" | grep -v "example" || true)
+if [ -n "$ATTR_CHECK" ]; then
+    echo "ERROR: Commit contains attribution patterns."
+    exit 1
+fi
+
+# Run Rust checks if Rust files changed
+if git diff --cached --name-only | grep -E "\.rs$" > /dev/null 2>&1; then
+    echo "Checking Rust code..."
+
+    if command -v cargo &> /dev/null; then
+        cd src-tauri 2>/dev/null || true
+
+        echo "  Running cargo check..."
+        if ! cargo check --all-targets 2>&1; then
+            echo "ERROR: cargo check failed."
+            exit 1
+        fi
+    else
+        echo "WARNING: cargo not found, skipping Rust checks"
+    fi
+fi
+
+# Run TypeScript checks if frontend files changed
+if git diff --cached --name-only | grep -E "\.(ts|tsx)$" > /dev/null 2>&1; then
+    echo "Checking TypeScript..."
+
+    if command -v npx &> /dev/null; then
+        if ! npx tsc --noEmit 2>&1; then
+            echo "ERROR: TypeScript check failed."
+            exit 1
+        fi
+    fi
+fi
+
+echo "Pre-commit checks passed!"
+exit 0

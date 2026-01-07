@@ -1,0 +1,68 @@
+.file-tree {
+  padding: 0.5rem 0;
+  user-select: none;
+}
+
+.file-tree-loading,
+.file-tree-error,
+.file-tree-empty {
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.file-tree-error {
+  color: var(--error);
+}
+
+.file-node-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: background-color 0.1s ease;
+}
+
+.file-node-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.file-node-row.selected {
+  background-color: rgba(74, 158, 255, 0.15);
+  color: var(--accent);
+}
+
+.file-node-row.directory .file-name {
+  font-weight: 500;
+}
+
+.file-icon {
+  font-family: monospace;
+  font-size: 0.75rem;
+  width: 1.25rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.file-node-row.directory .file-icon {
+  color: var(--accent);
+}
+
+.file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.loading {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.file-children {
+  /* Children are indented via padding in FileNode */
+}

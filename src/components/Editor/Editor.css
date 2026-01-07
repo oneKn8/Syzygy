@@ -1,0 +1,83 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-primary);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  min-height: 36px;
+}
+
+.editor-file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.editor-language {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.editor-filepath {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.editor-dirty {
+  color: var(--warning);
+  margin-left: 0.25rem;
+  font-weight: bold;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editor-save-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.editor-save-btn:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.editor-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.editor-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.codemirror-container {
+  height: 100%;
+}
+
+.codemirror-container .cm-editor {
+  height: 100%;
+}
