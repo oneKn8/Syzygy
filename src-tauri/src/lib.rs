@@ -1,4 +1,4 @@
-//! Syzygy - Premium Document Engineering IDE
+//! Syzygy - RFP and proposal authoring tool
 //!
 //! A next-generation document engineering platform with:
 //! - Typst and LaTeX support
@@ -130,7 +130,7 @@ pub fn run() {
             });
 
             let window = app.get_webview_window("main").unwrap();
-            window.set_title("Syzygy - Document Engineering IDE")?;
+            window.set_title("Syzygy - RFP & Proposal Authoring")?;
 
             log::info!("Syzygy initialized successfully");
 
