@@ -117,7 +117,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>RFPMaker</h1>
-        <p>Premium Document Engineering IDE</p>
+        <p>RFP &amp; Proposal Authoring</p>
         <div className="header-status">
           {compileStatus && (
             <span className={`compile-status ${compileStatus.errors > 0 ? "error" : "success"}`}>
