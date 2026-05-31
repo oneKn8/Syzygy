@@ -1,6 +1,6 @@
 //! Syzygy - RFP and proposal authoring tool
 //!
-//! A next-generation document engineering platform with:
+//! A document-engineering platform for RFPs and proposals, with:
 //! - Typst and LaTeX support
 //! - Visual document pipelines
 //! - AI-powered assistance

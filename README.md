@@ -38,7 +38,7 @@
 
 ## The Problem
 
-Document creation for enterprises is broken:
+Proposal and RFP creation for enterprises is broken:
 
 - **Word processors** produce inconsistent, unprofessional output
 - **LaTeX** has a brutal learning curve and glacial compile times
