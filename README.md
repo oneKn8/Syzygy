@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  A next-generation document engineering IDE that brings celestial precision to professional document creation.
+  An RFP and proposal authoring tool that brings celestial precision to professional proposal creation.
   <br />
-  Visual pipelines. AI intelligence. Typst power.
+  RFP intelligence. Visual pipelines. Typst power.
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Document creation for enterprises is broken:
 
 **Syzygy** (noun): *The alignment of three or more celestial bodies* - when everything comes together perfectly.
 
-We built the document IDE that proposal teams, technical writers, and publishers actually need:
+We built the RFP and proposal authoring tool that proposal teams, technical writers, and publishers actually need:
 
 ```
 +------------------+     +------------------+     +------------------+
